@@ -623,41 +623,6 @@ with tabs[1]:
                     vam_tableau_html(step, result),
                     unsafe_allow_html=True,
                 )
-                st.markdown("**Ringkasan Iterasi**")
-                st.dataframe(vam_summary_table(step), hide_index=True, use_container_width=True)
-
-                penalty_left, penalty_right = st.columns(2)
-                with penalty_left:
-                    st.markdown("**Penalty Baris**")
-                    st.dataframe(
-                        dict_to_table(step["row_penalties"], "Sumber", "Penalty"),
-                        hide_index=True,
-                        use_container_width=True,
-                    )
-                with penalty_right:
-                    st.markdown("**Penalty Kolom**")
-                    st.dataframe(
-                        dict_to_table(step["column_penalties"], "Tujuan", "Penalty"),
-                        hide_index=True,
-                        use_container_width=True,
-                    )
-
-                remaining_left, remaining_right = st.columns(2)
-                with remaining_left:
-                    st.markdown("**Sisa Supply**")
-                    st.dataframe(
-                        dict_to_table(step["remaining_supply"], "Sumber", "Sisa Supply"),
-                        hide_index=True,
-                        use_container_width=True,
-                    )
-                with remaining_right:
-                    st.markdown("**Sisa Demand**")
-                    st.dataframe(
-                        dict_to_table(step["remaining_demand"], "Tujuan", "Sisa Demand"),
-                        hide_index=True,
-                        use_container_width=True,
-                    )
-
 with tabs[2]:
     if not result:
         st.info("Klik tombol Hitung Solusi pada tab Input Data terlebih dahulu.")
