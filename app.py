@@ -44,9 +44,8 @@ EXAMPLE_DEMAND = pd.DataFrame(
             "SMPN 3 JATINANGOR",
             "SMAN JATINANGOR",
             "MTS MAARIF CIKERUH",
-            "Dummy",
         ],
-        "Demand": [776, 604, 676, 646, 1310, 803, 1025, 850, 1855, 1102, 1663],
+        "Demand": [776, 604, 676, 646, 1310, 803, 1025, 850, 1855, 1102],
     }
 )
 EXAMPLE_COSTS = pd.DataFrame(
