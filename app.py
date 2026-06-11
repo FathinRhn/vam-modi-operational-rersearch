@@ -20,19 +20,42 @@ st.set_page_config(page_title="Transportation Problem Solver", layout="wide")
 
 
 EXAMPLE_SUPPLY = pd.DataFrame(
-    {"Nama Sumber": ["SPPG A", "SPPG B", "SPPG C"], "Supply": [80, 120, 100]}
+    {
+        "Nama Sumber": [
+            "SPPG SAYANG JATINANGOR",
+            "SPPG CIBEUSI 2",
+            "SPPG CIKERUH",
+            "SPPG CIPACING 2",
+            "SPPG Yayasan KH Abu Syaeri Cikalama",
+        ],
+        "Supply": [2440, 1182, 2966, 1722, 3000],
+    }
 )
 EXAMPLE_DEMAND = pd.DataFrame(
     {
-        "Nama Tujuan": ["SD Negeri 1", "SD Negeri 2", "SMP Negeri 1", "SMA Negeri 1"],
-        "Demand": [70, 90, 60, 80],
+        "Nama Tujuan": [
+            "MI ASY SYAFIIYAH",
+            "MIS BAITURRAHMAN",
+            "SD NEGERI CIBEUSI",
+            "MIS CIBEUSI",
+            "SMKS PASUNDAN JATINANGOR",
+            "SD NEGERI CIPACING I",
+            "SDIT IMAM BUKHARI",
+            "SMPN 3 JATINANGOR",
+            "SMAN JATINANGOR",
+            "MTS MAARIF CIKERUH",
+            "Dummy",
+        ],
+        "Demand": [776, 604, 676, 646, 1310, 803, 1025, 850, 1855, 1102, 1663],
     }
 )
 EXAMPLE_COSTS = pd.DataFrame(
     [
-        [4, 6, 8, 13],
-        [5, 11, 9, 7],
-        [8, 7, 4, 6],
+        [0.168, 2.362, 2.590, 2.667, 0.267, 0.914, 0.571, 5.562, 2.057, 1.524, 0],
+        [1.752, 2.895, 2.590, 2.590, 2.514, 0.610, 2.819, 6.781, 4.190, 3.810, 0],
+        [1.143, 3.276, 1.600, 1.600, 0.838, 1.676, 1.448, 4.876, 1.524, 1.143, 0],
+        [1.829, 1.295, 1.981, 1.981, 1.981, 0.457, 2.286, 6.095, 0.457, 3.124, 0],
+        [3.810, 6.095, 3.886, 3.581, 3.505, 3.886, 3.657, 5.790, 2.133, 2.286, 0],
     ]
 )
 
